@@ -53,7 +53,16 @@
 #pragma cling add_include_path("$CONDA_PREFIX/lib/python3.9/site-packages/numpy/core/include")
 #pragma cling add_library_path("$CONDA_PREFIX/lib")
 
+#if defined(__linux__)
+
 #pragma cling load("libpython3.so")
+
+#elif __APPLE__
+
+#pragma cling load("libpython3.9.dylib")
+
+#endif
+
 
 #include <cmath>
 #include "matplotlibcpp.h"

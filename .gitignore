@@ -32,5 +32,9 @@
 *.app
 
 
-
+# Jupyter Notebook
 .ipynb_checkpoints
+
+
+# PyTorch
+*.pt
